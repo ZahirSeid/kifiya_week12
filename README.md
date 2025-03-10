@@ -121,5 +121,25 @@ After training the YOLO model, it was evaluated using the **classification repor
 
 **Task 2** focused on implementing and evaluating an object detection model using YOLO. Despite applying data augmentation techniques, the model's performance varied across different product categories. Future improvements could involve gathering more data, fine-tuning the model, and addressing class imbalances to improve detection accuracy across all object categories.
 
+# Task 3: FastAPI Implementation
+
+## Overview  
+In Task 3, we developed a FastAPI-based web service to streamline and enhance our project’s functionality. FastAPI was chosen for its high performance, ease of use, and compatibility with Python's async capabilities. This service acts as a robust interface for handling various operations efficiently.  
+
+## Key Features  
+- **High Performance:** FastAPI’s asynchronous capabilities enable faster request handling compared to traditional frameworks.  
+- **Automatic Documentation:** FastAPI provides auto-generated API documentation through Swagger UI and ReDoc.  
+- **Data Validation:** Using Pydantic models ensures strict data validation and serialization.  
+- **Ease of Integration:** The API seamlessly connects with our existing data processing, model training, and evaluation workflows.    
+
+## Usage  
+1. **Starting the Server:**  
+   ```bash
+   uvicorn main:app --reload
+
+Accessing API Documentation:
+
+    Swagger UI: http://127.0.0.1:8000/docs
+    ReDoc: http://127.0.0.1:8000/redoc
 
 
