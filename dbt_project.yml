@@ -1,0 +1,22 @@
+name: 'building_warehouse'
+version: '1.0.0'
+config-version: 2
+
+profile: 'building_warehouse'
+
+# Specify paths where dbt should look for different types of files
+model-paths: ["building_warehouse/models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  building_warehouse:
+    # Apply default configurations to all models in my_project
+    +materialized: table  # Materialize models as tables
